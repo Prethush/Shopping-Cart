@@ -1,4 +1,4 @@
-/*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -472,6 +472,18 @@ textarea::placeholder {
 button,
 [role="button"] {
   cursor: pointer;
+}
+
+/**
+ * Override legacy focus reset from Normalize with modern Firefox focus styles.
+ *
+ * This is actually an improvement over the new defaults in Firefox in our testing,
+ * as it triggers the better focus styles even for links, which still use a dotted
+ * outline in Firefox by default.
+ */
+
+:-moz-focusring {
+  outline: auto;
 }
 
 table {
@@ -6577,6 +6589,10 @@ video {
   min-height: 100vh;
 }
 
+.min-h-custom {
+  min-height: 25rem;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -6960,11 +6976,19 @@ video {
 }
 
 .flex-10 {
-  flex: 0 1 15%;
+  flex: 0 1 18%;
 }
 
 .flex-25 {
   flex: 0 1 25%;
+}
+
+.flex-30 {
+  flex: 0 1 33.2%;
+}
+
+.flex-50 {
+  flex: 0 1 50%;
 }
 
 .flex-70 {
@@ -6973,6 +6997,10 @@ video {
 
 .flex-80 {
   flex: 0 1 82%;
+}
+
+.flex-100 {
+  flex: 0 1 100%;
 }
 
 .flex-auto {
@@ -38714,6 +38742,10 @@ video {
     min-height: 100vh;
   }
 
+  .sm\:min-h-custom {
+    min-height: 25rem;
+  }
+
   .sm\:w-0 {
     width: 0px;
   }
@@ -39097,11 +39129,19 @@ video {
   }
 
   .sm\:flex-10 {
-    flex: 0 1 15%;
+    flex: 0 1 18%;
   }
 
   .sm\:flex-25 {
     flex: 0 1 25%;
+  }
+
+  .sm\:flex-30 {
+    flex: 0 1 33.2%;
+  }
+
+  .sm\:flex-50 {
+    flex: 0 1 50%;
   }
 
   .sm\:flex-70 {
@@ -39110,6 +39150,10 @@ video {
 
   .sm\:flex-80 {
     flex: 0 1 82%;
+  }
+
+  .sm\:flex-100 {
+    flex: 0 1 100%;
   }
 
   .sm\:flex-auto {
@@ -70337,6 +70381,10 @@ video {
     min-height: 100vh;
   }
 
+  .md\:min-h-custom {
+    min-height: 25rem;
+  }
+
   .md\:w-0 {
     width: 0px;
   }
@@ -70720,11 +70768,19 @@ video {
   }
 
   .md\:flex-10 {
-    flex: 0 1 15%;
+    flex: 0 1 18%;
   }
 
   .md\:flex-25 {
     flex: 0 1 25%;
+  }
+
+  .md\:flex-30 {
+    flex: 0 1 33.2%;
+  }
+
+  .md\:flex-50 {
+    flex: 0 1 50%;
   }
 
   .md\:flex-70 {
@@ -70733,6 +70789,10 @@ video {
 
   .md\:flex-80 {
     flex: 0 1 82%;
+  }
+
+  .md\:flex-100 {
+    flex: 0 1 100%;
   }
 
   .md\:flex-auto {
@@ -101960,6 +102020,10 @@ video {
     min-height: 100vh;
   }
 
+  .lg\:min-h-custom {
+    min-height: 25rem;
+  }
+
   .lg\:w-0 {
     width: 0px;
   }
@@ -102343,11 +102407,19 @@ video {
   }
 
   .lg\:flex-10 {
-    flex: 0 1 15%;
+    flex: 0 1 18%;
   }
 
   .lg\:flex-25 {
     flex: 0 1 25%;
+  }
+
+  .lg\:flex-30 {
+    flex: 0 1 33.2%;
+  }
+
+  .lg\:flex-50 {
+    flex: 0 1 50%;
   }
 
   .lg\:flex-70 {
@@ -102356,6 +102428,10 @@ video {
 
   .lg\:flex-80 {
     flex: 0 1 82%;
+  }
+
+  .lg\:flex-100 {
+    flex: 0 1 100%;
   }
 
   .lg\:flex-auto {
@@ -133583,6 +133659,10 @@ video {
     min-height: 100vh;
   }
 
+  .xl\:min-h-custom {
+    min-height: 25rem;
+  }
+
   .xl\:w-0 {
     width: 0px;
   }
@@ -133966,11 +134046,19 @@ video {
   }
 
   .xl\:flex-10 {
-    flex: 0 1 15%;
+    flex: 0 1 18%;
   }
 
   .xl\:flex-25 {
     flex: 0 1 25%;
+  }
+
+  .xl\:flex-30 {
+    flex: 0 1 33.2%;
+  }
+
+  .xl\:flex-50 {
+    flex: 0 1 50%;
   }
 
   .xl\:flex-70 {
@@ -133979,6 +134067,10 @@ video {
 
   .xl\:flex-80 {
     flex: 0 1 82%;
+  }
+
+  .xl\:flex-100 {
+    flex: 0 1 100%;
   }
 
   .xl\:flex-auto {
@@ -165206,6 +165298,10 @@ video {
     min-height: 100vh;
   }
 
+  .\32xl\:min-h-custom {
+    min-height: 25rem;
+  }
+
   .\32xl\:w-0 {
     width: 0px;
   }
@@ -165589,11 +165685,19 @@ video {
   }
 
   .\32xl\:flex-10 {
-    flex: 0 1 15%;
+    flex: 0 1 18%;
   }
 
   .\32xl\:flex-25 {
     flex: 0 1 25%;
+  }
+
+  .\32xl\:flex-30 {
+    flex: 0 1 33.2%;
+  }
+
+  .\32xl\:flex-50 {
+    flex: 0 1 50%;
   }
 
   .\32xl\:flex-70 {
@@ -165602,6 +165706,10 @@ video {
 
   .\32xl\:flex-80 {
     flex: 0 1 82%;
+  }
+
+  .\32xl\:flex-100 {
+    flex: 0 1 100%;
   }
 
   .\32xl\:flex-auto {

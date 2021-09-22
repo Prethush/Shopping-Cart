@@ -116,7 +116,7 @@ class App extends React.Component {
 
     //handle local storage
     handleUpdateLocalStorage = () => {
-        localStorage.setItem("carts", JSON.stringify(this.state.cart, "total", this.state.total));
+        localStorage.setItem("carts", JSON.stringify(this.state.cart));
     }
 
     render() {
@@ -125,7 +125,7 @@ class App extends React.Component {
         let totalQuantity = cart.reduce((acc, curr) => acc + curr.quantity, 0);
 
         return (
-           <main className="relative px-72 py-20">
+           <main className="relative px-64 py-20">
                <div className="w-16 h-16 bg-black fixed right-0 top-0 flex justify-center items-center cursor-pointer" onClick={this.handleCartOpen}>
                    <img src="/static/bag-icon.png" alt="cart"/>
                    <div className="w-4 h-4 rounded-full bg-yellow-500 text-black absolute text-center right-2 bottom-3 text-xs">{totalQuantity}</div>

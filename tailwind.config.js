@@ -4,15 +4,21 @@ module.exports = {
   theme: {
     extend: {
       flex: {
-        10: "0 1 15%",
+        10: "0 1 18%",
         80: "0 1 82%",
         25: "0 1 25%",
-        70: "0 1 65%"
+        70: "0 1 65%",
+        30: "0 1 33.2%",
+        50: "0 1 50%",
+        100: "0 1 100%"
       },
 
       height: {
         custom: "25rem",
         vertical: "70vh"
+      },
+      minHeight: {
+        custom: "25rem"
       },
       colors: {
         custom: "rgb(27,26,32)",

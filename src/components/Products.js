@@ -45,11 +45,11 @@ class Products extends React.Component {
             {/* //sorting (Highest to lowest) */}
 
                 < OrderBy allProducts = {allProducts} filterPrice = {this.props.filterPrice} filterByPrice={this.props.filterByPrice}/>
-                <article className="flex flex-wrap mt-4">
+                <div className="flex flex-wrap mt-4">
                     {
                         allProducts.map((product, i)  => (
                             <div className="relative flex-25 border-2 border-gray-100  mb-4 p-2" key={product.id}>
-                                <div className="h-custom">
+                                <div className="min-h-custom">
                                     <img className="object-contain w-full h-full" src={product.imgBig} alt={product.title}/>
                                 </div>
                                 <h4 className="text-center my-2 text-lg">{product.title}</h4>
@@ -65,7 +65,7 @@ class Products extends React.Component {
                             </div>
                         ))
                     }
-                </article>
+                </div>
             </>
            
         )
